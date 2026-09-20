@@ -3055,3 +3055,42 @@ a {
   opacity: 0.65;
   cursor: not-allowed;
 }
+/* ================================
+   CATEGORY BUTTON
+================================ */
+
+.add-category-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  margin-top: 8px;
+  padding: 9px 14px;
+
+  background: var(--primary-tint);
+  border: 1px solid var(--primary-tint-2);
+  border-radius: var(--r-sm);
+
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.add-category-button:hover {
+  background: var(--primary-tint-2);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.add-category-button:active {
+  transform: translateY(0);
+}
+@media (max-width: 600px) {
+  .add-category-button {
+    width: 100%;
+  }
+}

@@ -1,18 +1,17 @@
-
 import dotenv from "dotenv";
-import pg from "pg";
+import mysql from "mysql2/promise";
+
 dotenv.config();
-pg.types.setTypeParser(1082, (val) => val); // 1082 = Postgres DATE type OID
 
-
-const { Pool } = pg;
-
-const pool = new Pool({
-  user: "postgres",
+const pool = mysql.createPool({
+  user: "root",
   host: "localhost",
   database: "smart_taskflow",
   password: process.env.DB_PASSWORD,
-  port: 5432,
+  port: 3306,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
 export default pool;

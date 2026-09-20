@@ -14,9 +14,9 @@
     "dotenv": "^16.6.1",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.4",
     "node-cron": "^4.6.0",
-    "nodemailer": "^9.0.6",
-    "pg": "^8.23.0"
+    "nodemailer": "^9.0.6"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
